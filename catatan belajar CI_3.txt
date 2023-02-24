@@ -1,0 +1,51 @@
+- Kita hanya memain di folder application saja! engga usah binggung brother!
+- Konfigurasi file autoload.php, config.php , database.php, 
+
+- Menggunakan Base_url harus mengaktifkan base url dengan cara = 
+$autoload['helper'] = array('url');
+
+
+- Tambah data Mahasiswa Menggunakan form_helper bawaan dari CI_3 bisa juga
+- Menambahkan fitur validasi menggunakan CI 3 jadi kita tidak perlu lagi menntukan type inputnya yang ada dihtml
+(beberapa browser ada disupport jika menentukan type-nya)
+
+1. Memanggil database ada 3 cara 
+    - $this->load->database()  ==> khusus satu function saja
+
+    - Membuat constructor agar tidak mengulang ulang == khusus satu contoller saja!
+    public function __construct()
+    {
+         parent::__construct();
+         $this->load->database();
+    }
+
+    -  jika semua controler membutuhkan database maka aktifkan di autoload 'database'
+
+
+2. Routes.php ==> untuk memunculkan halaman default pada website yang pertama kali kita buka bro!
+
+
+3. Menggunakan form_validation
+4. Pesan Error ditampilkan di tambah.php
+5. Mengubah bahasa menjadi bahasa indonesia. Defult Pesan Error ada di folder System ==> languange ==> english ==> form_validation_lang.php
+jika ingin Konfigurasi jangan di file tersebut, cara copy file tersebut ke folder application ==> languange ==> english
+6. nambah data menggunakan query builder insert dari CI 3
+7. Membuat Flash Message atau Flash Data yang ada di CI 3 
+8. Akftikan Session di autoload untuk menggunakan flashdata ==> $autoload['libraries'] = array('database', 'session');
+9. Membuat CRUD
+
+
+__ Perbedaan Base_url dan Site_url ? Site_url terlihat file index.php-nya
+
+Pembuatan Pagnation 
+1. Data Dummy bisa mengunjungin situs ini https://filldb.info/
+2. untuk membuat pagnation kita menggunakan library tersebut agar mudah nanti digunakan ya 
+3, Menampilkan data data dummy dan membuat pagination untuk data tesrsebut
+
+
+Membuat Fitur Searching dengan mencari data dummy dan sesuai dengan paginationnya
+1. Configurasi pagination dirapikan dan disimpan di file baru yang bernama pagination.php di folder config
+
+
+Membuat flash message atau flashdata menggunakan sweetalert2
+1. kunjungin situs web sweetalert2
